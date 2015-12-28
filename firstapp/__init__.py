@@ -3,10 +3,10 @@ import os
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 
-from firstapp.config import DebugConfig
+from firstapp.config import DebugConfig, ProductionConfig
 
 app = Flask(__name__)
-app.config.from_object(DebugConfig)
+app.config.from_object(ProductionConfig)
 
 db = SQLAlchemy(app)
 
